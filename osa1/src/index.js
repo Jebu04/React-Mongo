@@ -1,35 +1,41 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Header from './Header'
-import Contents from './Contents'
-import Feedback2 from './Feedback2'
+import Phonebook from "./Components/Phonebook"
+import FeedBack2 from './Components/Feedback2'
+import Reminder from './Components/Reminder'
 
 
-const App = () => {
-  
-  const phonebookapp = {
-    title: 'Superadvanced web phonebook app',
+function App() {
+
+  const phonebook = {
+    name: 'Superadvanced phonebook app',
     contacts: [
-    {
-      name: 'John Doe',
-      phonenumber: '358401234567'
-    },
-    {
-      name: 'Jane Doe',
-      phonenumber: '44551234567'
-    },
-    {
-      name: 'Foo bar',
-      phonenumber: '000'
-    }
+      {
+        name: 'John Doe',
+        phonenumber: '358401234567',
+        id: 1
+      },
+      {
+        name: 'Jane Doe',
+        phonenumber: '44551234567',
+        id: 2
+      },
+      {
+        name: 'Foo bar',
+        phonenumber: '000',
+        id: 3
+      }
     ]
   }
 
+
   return (
     <div>
-      <Header title={phonebookapp.title} />
-      <Contents contacts={phonebookapp.contacts} />
-      <Feedback2 />
+      <Phonebook phonebook={phonebook} />
+      <FeedBack2 />
+      <Reminder />
+
+
     </div>
   )
 }
