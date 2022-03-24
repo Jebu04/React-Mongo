@@ -1,14 +1,13 @@
 import React from "react"
 
-const Statistic =({name,estadisticas}) =>{
-    return(
-            
+const Statistics =({name,statisti}
+    ) =>{
+    return(      
         <tr>
-        <th>{name}</th>
-        <td>{estadisticas}</td>
-        </tr>
-        
+            <th>{name}</th>
+            <td>{statisti}</td>
+        </tr>  
     )
 }
 
-export default Statistic
+export default Statistics

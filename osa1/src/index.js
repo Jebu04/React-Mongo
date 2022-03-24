@@ -1,8 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import axios from 'axios'
 import Phonebook from "./Components/Phonebook"
-import FeedBack2 from './Components/Feedback2'
+import FeedBack from './Components/Feedback'
 import Reminder from './Components/Reminder'
+
+axios
+  .get('http://localhost:3001/reminders')
+  .then(response => {
+    const notes = response.data
+    console.log(notes)
+  })
 
 
 function App() {
@@ -32,7 +40,7 @@ function App() {
   return (
     <div>
       <Phonebook phonebook={phonebook} />
-      <FeedBack2 />
+      <FeedBack />
       <Reminder />
 
 

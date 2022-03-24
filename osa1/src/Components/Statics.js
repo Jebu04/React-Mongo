@@ -1,10 +1,9 @@
 import React from "react"
 
-const Statics =({stats, name}) => (
-     
+const Statics =({name, stats}) => (
      <tr>
-     <th>{name}</th>
-     <td>{stats}</td>
+          <th>{name}</th>
+        <td>{stats}</td>
      </tr>
 )
 
